@@ -1,6 +1,7 @@
 package com.example.animal
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -28,10 +29,10 @@ class InputAnimal : AppCompatActivity() {
             imm.hideSoftInputFromWindow(view?.windowToken,0)
         }
 
-        val user_age_list = arrayOf("당신의 나이를 입력하세요.","10대", "20대", "30대","40대","50대","60대")
-        val pet_age_list = arrayOf("애완견 나이를 입력하세요","1~10", "11~20", "21~30","31~40")
-        val pet_breed_list = arrayOf("애관견 종을 입력하세요","저먼 셰퍼드", "포메라니안", "시베리안 허스키","푸들","골든 리트리버","시추","로트바일러","시바견")
-        val pet_gender_list = arrayOf("성별을 입력하세요","여자", "남자", "중성")
+        val user_age_list = arrayOf("10대", "20대", "30대","40대","50대","60대")
+        val pet_age_list = arrayOf("1~10", "11~20", "21~30","31~40")
+        val pet_breed_list = arrayOf("저먼 셰퍼드", "포메라니안", "시베리안 허스키","푸들","골든 리트리버","시추","로트바일러","시바견")
+        val pet_gender_list = arrayOf("여자", "남자", "중성")
 
 
         val adapter_user_age = ArrayAdapter(this, android.R.layout.simple_list_item_1, user_age_list)
@@ -43,12 +44,9 @@ class InputAnimal : AppCompatActivity() {
 
                 // get TextView's Text.
                 val strText = parent.getItemAtPosition(position) as String
-
-                if(position != 0){
                     user_age_txt.text = strText
                     user_age_txt.isVisible = true
                     user_age.isVisible = false
-                }
 
                 // TODO : use strText
             }
@@ -68,12 +66,9 @@ class InputAnimal : AppCompatActivity() {
 
                 // get TextView's Text.
                 val strText = parent.getItemAtPosition(position) as String
-
-                if(position != 0){
                     pet_age_txt.text = strText
                     pet_age_txt.isVisible = true
                     pet_age.isVisible = false
-                }
 
                 // TODO : use strText
             }
@@ -94,11 +89,10 @@ class InputAnimal : AppCompatActivity() {
                 // get TextView's Text.
                 val strText = parent.getItemAtPosition(position) as String
 
-                if(position != 0){
                     pet_breed_txt.text = strText
                     pet_breed_txt.isVisible = true
                     pet_breed.isVisible = false
-                }
+
 
                 // TODO : use strText
             }
@@ -119,11 +113,9 @@ class InputAnimal : AppCompatActivity() {
                 // get TextView's Text.
                 val strText = parent.getItemAtPosition(position) as String
 
-                if(position != 0){
                     pet_gender_txt.text = strText
                     pet_gender_txt.isVisible = true
                     pet_gender.isVisible = false
-                }
 
                 // TODO : use strText
             }
@@ -135,7 +127,8 @@ class InputAnimal : AppCompatActivity() {
         }
 
         next.setOnClickListener{
-
+            val nextIntent = Intent(this, Login::class.java)
+            startActivity(nextIntent)
         }
 
     }
