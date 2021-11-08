@@ -6,6 +6,7 @@ import net.nurigo.java_sdk.exceptions.CoolsmsException;
 import org.json.simple.JSONObject;
 
 import java.util.HashMap;
+import java.util.Random;
 
 public class SmsAPI extends Thread{
 
@@ -25,7 +26,7 @@ public class SmsAPI extends Thread{
         params.put("to", "01058941451");
         params.put("from", "01058941451");
         params.put("type", "SMS");
-        params.put("text", "Coolsms Testing Message!");
+        params.put("text", randomGen());
         params.put("app_version", "test app 1.2"); // application name and version
 
         try {
@@ -37,8 +38,17 @@ public class SmsAPI extends Thread{
             System.out.println(e.getMessage());
             System.out.println(e.getCode());
         }
+    }
 
+    private String randomGen(){
+        String numStr = "";
+        Random rand = new Random();
 
+        for(int i=0;i<6;i++){
+            numStr += Integer.toString(rand.nextInt(10));
+        }
+
+        return numStr;
     }
 
 }
