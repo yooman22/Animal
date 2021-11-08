@@ -13,6 +13,15 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Dog_Introduce"
+            android:exported="false" />
+        <activity
+            android:name=".Dog_Main"
+            android:exported="false" />
+        <activity
+            android:name=".Find_Password_Result"
+            android:exported="false" />
+        <activity
             android:name=".Find_ID_Result"
             android:exported="false" />
         <activity
