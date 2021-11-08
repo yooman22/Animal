@@ -14,7 +14,7 @@ class SignUp : AppCompatActivity() {
 
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
-        back_view.setOnClickListener{
+        signUp_back_view.setOnClickListener{
             var view = this.currentFocus
             imm.hideSoftInputFromWindow(view?.windowToken,0)
         }
