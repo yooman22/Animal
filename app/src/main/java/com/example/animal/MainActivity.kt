@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         smsButton.setOnClickListener {
-            val smsAPI:SmsAPI = SmsAPI();
+            val smsAPI:SmsAPI = SmsAPI("no");
             smsAPI.start();
             smsAPI.join();
         }

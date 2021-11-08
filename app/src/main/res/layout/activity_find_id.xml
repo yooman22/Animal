@@ -53,6 +53,7 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <EditText
+            android:id="@+id/findId"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
@@ -93,6 +94,7 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
                 <Button
+                    android:id="@+id/phoneAuthBotton"
                     android:background="@drawable/edge"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
@@ -105,6 +107,7 @@
         </LinearLayout>
 
         <EditText
+            android:id="@+id/AuthNum"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
@@ -122,6 +125,7 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
+            android:id="@+id/findIdButton"
             android:background="@drawable/edge"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"

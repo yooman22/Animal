@@ -26,6 +26,16 @@ class Login : AppCompatActivity() {
             startActivity(nextIntent)
         }
 
+        user_id_find.setOnClickListener{
+            val nextIntent = Intent(this, Find_ID::class.java)
+            startActivity(nextIntent)
+        }
+
+        user_password_find.setOnClickListener{
+            val nextIntent = Intent(this, Find_Password::class.java)
+            startActivity(nextIntent)
+        }
+
         loginButton.setOnClickListener {
             var hashMap  = HashMap<String,String>()
 

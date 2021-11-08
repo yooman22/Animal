@@ -22,7 +22,13 @@
             android:name=".Dog_Main"
             android:exported="false" />
         <activity
+            android:name=".Find_Password"
+            android:exported="false" />
+        <activity
             android:name=".Find_Password_Result"
+            android:exported="false" />
+        <activity
+            android:name=".Find_ID"
             android:exported="false" />
         <activity
             android:name=".Find_ID_Result"
