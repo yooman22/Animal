@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Dog_Introduce_detail"
+            android:exported="false" />
+        <activity
             android:name=".Dog_Introduce"
             android:exported="false" />
         <activity
