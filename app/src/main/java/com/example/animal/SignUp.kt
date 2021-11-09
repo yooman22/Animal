@@ -1,10 +1,13 @@
 package com.example.animal
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import com.server.conn.ServerAPI
+import kotlinx.android.synthetic.main.activity_find_id_result.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUp : AppCompatActivity() {
@@ -32,6 +35,13 @@ class SignUp : AppCompatActivity() {
             var serverAPI: ServerAPI = ServerAPI(1,hashMap)
             serverAPI.start();
             serverAPI.join();
+
+            Toast.makeText(this, "회원가입 성공", Toast.LENGTH_LONG).show()
+
+            Thread.sleep(3000);
+
+            val nextIntent = Intent(this, Login::class.java)
+            startActivity(nextIntent);
         }
     }
 }

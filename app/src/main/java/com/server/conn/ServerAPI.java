@@ -13,10 +13,15 @@ public class ServerAPI extends Thread{
 
     public int flag = 0;
     public HashMap<String,String> query;
+    private StringBuilder output = new StringBuilder();
 
     public ServerAPI(int flag,HashMap<String,String> query){
         this.flag = flag;
         this.query = query;
+    }
+
+    public String getOutput(){
+        return output.toString();
     }
 
     @Override
@@ -30,8 +35,6 @@ public class ServerAPI extends Thread{
     };
 
     public void requestAPI(String requestURL){
-
-        StringBuilder output = new StringBuilder();
 
         try {
             java.net.URL url = new URL(requestURL);
@@ -52,7 +55,6 @@ public class ServerAPI extends Thread{
 
                     String temp = "";
 
-                    System.out.println("br.readLine() : " + br.readLine());
                     while((temp = br.readLine()) != null){
                         System.out.println("temp : " + temp);
                         output.append(temp);

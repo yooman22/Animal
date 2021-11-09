@@ -1,10 +1,13 @@
 package com.example.animal
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.server.conn.ServerAPI
 import kotlinx.android.synthetic.main.activity_find_id.*
 import kotlinx.android.synthetic.main.activity_login.*
+import org.json.JSONObject
 
 class Find_ID : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +42,18 @@ class Find_ID : AppCompatActivity() {
             var serverAPI: ServerAPI = ServerAPI(4,hashMap)
             serverAPI.start();
             serverAPI.join();
+
+            val jsonObject = JSONObject(serverAPI.output);
+            val id = jsonObject.getString("id")
+            System.out.println(id)
+            if(id != null){
+                val nextIntent = Intent(this, Find_ID_Result::class.java)
+                nextIntent.putExtra("id",id);
+                startActivity(nextIntent);
+            }else{
+                Toast.makeText(this, "해당 정보의 아이디가 존재 하지 않습니다.", Toast.LENGTH_LONG).show()
+
+            }
 
         }
     }

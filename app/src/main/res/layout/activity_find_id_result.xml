@@ -52,7 +52,8 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <EditText
+        <TextView
+            android:id="@+id/resultId"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
@@ -70,6 +71,7 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
+            android:id="@+id/moveLoginButton"
             android:background="@drawable/edge"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
@@ -82,6 +84,7 @@
         </Button>
 
         <Button
+            android:id="@+id/findPwdButton"
             android:background="@drawable/edge"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
