@@ -31,6 +31,9 @@ public class ServerAPI extends Thread{
             case 2 : requestAPI("http://10.0.2.2:8080/json/login?"+makeQueryString()); break;
             case 3 : requestAPI("http://10.0.2.2:8080/json/phoneAuth?"+makeQueryString()); break;
             case 4 : requestAPI("http://10.0.2.2:8080/json/findId?"+makeQueryString()); break;
+            case 5 : requestAPI("http://10.0.2.2:8080/json/findPwd?"+makeQueryString()); break;
+            case 6 : requestAPI("http://10.0.2.2:8080/json/updatePwd?"+makeQueryString()); break;
+
         }
     };
 

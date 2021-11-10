@@ -21,7 +21,7 @@ class Find_ID_Result : AppCompatActivity() {
             startActivity(nextIntent);
         }
 
-        findPwdButton.setOnClickListener{
+        moveFindPwdButton.setOnClickListener{
             val nextIntent = Intent(this, Find_Password::class.java)
             startActivity(nextIntent);
         }

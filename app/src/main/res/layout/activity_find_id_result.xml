@@ -84,7 +84,7 @@
         </Button>
 
         <Button
-            android:id="@+id/findPwdButton"
+            android:id="@+id/moveFindPwdButton"
             android:background="@drawable/edge"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"

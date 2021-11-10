@@ -45,14 +45,15 @@ class Find_ID : AppCompatActivity() {
 
             val jsonObject = JSONObject(serverAPI.output);
             val id = jsonObject.getString("id")
+
             System.out.println(id)
-            if(id != null){
+
+            if(id != "X"){
                 val nextIntent = Intent(this, Find_ID_Result::class.java)
                 nextIntent.putExtra("id",id);
                 startActivity(nextIntent);
             }else{
                 Toast.makeText(this, "해당 정보의 아이디가 존재 하지 않습니다.", Toast.LENGTH_LONG).show()
-
             }
 
         }

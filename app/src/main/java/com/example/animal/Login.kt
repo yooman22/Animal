@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.server.conn.ServerAPI
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
+import org.json.JSONObject
 
 class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +34,7 @@ class Login : AppCompatActivity() {
         }
 
         user_password_find.setOnClickListener{
-            val nextIntent = Intent(this, Find_Password::class.java)
+            val nextIntent = Intent(this, Find_Password_Result::class.java)
             startActivity(nextIntent)
         }
 
@@ -45,6 +47,16 @@ class Login : AppCompatActivity() {
             var serverAPI: ServerAPI = ServerAPI(2,hashMap)
             serverAPI.start();
             serverAPI.join();
+
+            val jsonObject = JSONObject(serverAPI.output);
+            val id = jsonObject.getString("status")
+
+            if(id == "suc"){
+                Toast.makeText(this, "로그인 성공", Toast.LENGTH_LONG).show()
+            }else{
+                Toast.makeText(this, "로그인 실패", Toast.LENGTH_LONG).show()
+            }
+
         }
 
     }
