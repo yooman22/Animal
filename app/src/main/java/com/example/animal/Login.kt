@@ -39,6 +39,7 @@ class Login : AppCompatActivity() {
         }
 
         loginButton.setOnClickListener {
+
             var hashMap  = HashMap<String,String>()
 
             hashMap.put("id",loginId.text.toString());
@@ -53,6 +54,8 @@ class Login : AppCompatActivity() {
 
             if(id == "suc"){
                 Toast.makeText(this, "로그인 성공", Toast.LENGTH_LONG).show()
+                val nextIntent = Intent(this, Dog_Main::class.java)
+                startActivity(nextIntent)
             }else{
                 Toast.makeText(this, "로그인 실패", Toast.LENGTH_LONG).show()
             }

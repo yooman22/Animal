@@ -78,7 +78,7 @@
 
             <EditText
                 android:id="@+id/phoneNumber_txt"
-                android:layout_width="280dp"
+                android:layout_width="240dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/white_edge"

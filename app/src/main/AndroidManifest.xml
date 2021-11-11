@@ -13,6 +13,15 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Quiz_Result"
+            android:exported="false" />
+        <activity
+            android:name=".Quiz_Detail"
+            android:exported="false" />
+        <activity
+            android:name=".QuizMain"
+            android:exported="false" />
+        <activity
             android:name=".Dog_Introduce_detail"
             android:exported="false" />
         <activity
