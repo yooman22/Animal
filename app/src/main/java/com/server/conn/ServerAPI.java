@@ -27,12 +27,12 @@ public class ServerAPI extends Thread{
     @Override
     public void run() {
         switch(flag){
-            case 1 : requestAPI("http://10.0.2.2:8080/json/signUp?"+makeQueryString()); break;
-            case 2 : requestAPI("http://10.0.2.2:8080/json/login?"+makeQueryString()); break;
-            case 3 : requestAPI("http://10.0.2.2:8080/json/phoneAuth?"+makeQueryString()); break;
-            case 4 : requestAPI("http://10.0.2.2:8080/json/findId?"+makeQueryString()); break;
-            case 5 : requestAPI("http://10.0.2.2:8080/json/findPwd?"+makeQueryString()); break;
-            case 6 : requestAPI("http://10.0.2.2:8080/json/updatePwd?"+makeQueryString()); break;
+            case 1 : requestAPI("http://jwhan402.cafe24.com/json/signUp?"+makeQueryString()); break;
+            case 2 : requestAPI("http://jwhan402.cafe24.com/json/login?"+makeQueryString()); break;
+            case 3 : requestAPI("http://jwhan402.cafe24.com/json/phoneAuth?"+makeQueryString()); break;
+            case 4 : requestAPI("http://jwhan402.cafe24.com/json/findId?"+makeQueryString()); break;
+            case 5 : requestAPI("http://jwhan402.cafe24.com/json/findPwd?"+makeQueryString()); break;
+            case 6 : requestAPI("http://jwhan402.cafe24.com/json/updatePwd?"+makeQueryString()); break;
 
         }
     };
